@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PathSnap Evaluator</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  body { margin: 0; font-family: sans-serif; display: flex; height: 100vh; background: #fff; color: #222; }
+  #side { width: 340px; padding: 14px; overflow-y: auto; border-right: 1px solid #ccc; box-sizing: border-box; }
+  #map { flex: 1; }
+  h2 { margin: 0 0 10px; }
+  input { width: 100%; padding: 6px; box-sizing: border-box; }
+  .trip { display: block; width: 100%; margin: 4px 0; padding: 8px; text-align: left; cursor: pointer;
+          border: 1px solid #bbb; background: #f6f6f6; }
+  .trip.active { background: #1f6feb; color: #fff; }
+  table { border-collapse: collapse; width: 100%; margin-top: 10px; font-size: 14px; }
+  td, th { border: 1px solid #ccc; padding: 4px 6px; text-align: left; }
+  #status { margin: 10px 0; font-size: 14px; }
+  .legend { background: #fff; padding: 6px 10px; border: 1px solid #999; font-size: 13px; }
+</style>
+</head>
+<body>
+<div id="side">
+  <h2>PathSnap</h2>
+  <label>API address</label>
+  <input id="api" value="http://localhost:8000">
+  <button class="trip" onclick="loadTrips()" style="margin-top:8px">Load trips</button>
+  <div id="trips"></div>
+  <div id="status"></div>
+  <div id="result"></div>
+</div>
+<div id="map"></div>
+<script>
+const map = L.map('map').setView([50, 10], 4);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+  { maxZoom: 19, attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+let layers = L.layerGroup().addTo(map);
+const legend = L.control({ position: 'bottomright' });
+legend.onAdd = () => { const d = L.DomUtil.create('div', 'legend');
+  d.innerHTML = '<span style="color:#1f6feb">&#9679;</span> GPS observations<br><span style="color:#d62828">&#9644;</span> Predicted route'; return d; };
+legend.addTo(map);
+
+const api = () => document.getElementById('api').value.replace(/\/$/, '');
+const status = t => document.getElementById('status').textContent = t;
+
+async function loadTrips() {
+  try {
+    const r = await (await fetch(api() + '/trips')).json();
+    const box = document.getElementById('trips');
+    box.innerHTML = '';
+    r.trips.forEach(id => {
+      const b = document.createElement('button');
+      b.className = 'trip'; b.textContent = 'Trip ' + id;
+      b.onclick = () => run(id, b);
+      box.appendChild(b);
+    });
+    status(r.trips.length + ' trips from partition "' + r.partition + '"');
+  } catch (e) { status('Could not reach API: ' + e); }
+}
+
+async function run(id, btn) {
+  document.querySelectorAll('.trip').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  status('Running trip ' + id + ' ...');
+  document.getElementById('result').innerHTML = '';
+  try {
+    const res = await fetch(api() + '/predict', { method: 'POST',
+      headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ trip_id: id }) });
+    if (!res.ok) throw new Error(res.status + ' ' + await res.text());
+    const r = await res.json();
+    layers.clearLayers();
+    const route = L.polyline(r.predicted_route, { color: '#d62828', weight: 4 }).addTo(layers);
+    r.gps.forEach(p => L.circleMarker(p, { radius: 2, color: '#1f6feb', weight: 0, fillOpacity: 0.8 }).addTo(layers));
+    map.fitBounds(L.latLngBounds(r.gps));
+    const h = r.metrics.classifier_hmm, c = r.metrics.classifier_only, f = x => (100 * x).toFixed(2) + ' %';
+    document.getElementById('result').innerHTML = `
+      <table>
+        <tr><th></th><th>Classifier + HMM</th><th>Classifier only</th></tr>
+        <tr><td>Point accuracy</td><td>${f(h.point_accuracy)}</td><td>${f(c.point_accuracy)}</td></tr>
+        <tr><td>Route continuity</td><td>${f(h.route_continuity)}</td><td>${f(c.route_continuity)}</td></tr>
+        <tr><td>Route precision</td><td>${f(h.route_precision)}</td><td>${f(c.route_precision)}</td></tr>
+        <tr><td>Route recall</td><td>${f(h.route_recall)}</td><td>${f(c.route_recall)}</td></tr>
+        <tr><td>Route F1</td><td>${f(h.route_f1)}</td><td>${f(c.route_f1)}</td></tr>
+      </table>
+      <p>GPS points: ${r.n_points}<br>Predicted road segments: ${r.predicted_route.length}<br>
+      Chain breaks: ${r.chain_breaks}<br>Inference time: ${r.inference_time_s} s</p>`;
+    status('Trip ' + id + ' done');
+  } catch (e) { status('Error: ' + e); }
+}
+loadTrips();
+</script>
+</body>
+</html>
