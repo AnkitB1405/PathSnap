@@ -1,0 +1,43 @@
+{'beta': 1, 'w_emit': 0.5, 'train_top1': np.float64(0.9397711895682126)}
+{'beta': 1, 'w_emit': 1.0, 'train_top1': np.float64(0.9437569196703162)}
+{'beta': 1, 'w_emit': 2.0, 'train_top1': np.float64(0.9452331160044286)}
+{'beta': 1, 'w_emit': 4.0, 'train_top1': np.float64(0.94599581744372)}
+{'beta': 2, 'w_emit': 0.5, 'train_top1': np.float64(0.9437569196703162)}
+{'beta': 2, 'w_emit': 1.0, 'train_top1': np.float64(0.9452331160044286)}
+{'beta': 2, 'w_emit': 2.0, 'train_top1': np.float64(0.94599581744372)}
+{'beta': 2, 'w_emit': 4.0, 'train_top1': np.float64(0.9447656538319597)}
+{'beta': 5, 'w_emit': 0.5, 'train_top1': np.float64(0.9451347029154877)}
+{'beta': 5, 'w_emit': 1.0, 'train_top1': np.float64(0.945282322548899)}
+{'beta': 5, 'w_emit': 2.0, 'train_top1': np.float64(0.9432156476811416)}
+{'beta': 5, 'w_emit': 4.0, 'train_top1': np.float64(0.9410013531799729)}
+{'beta': 10, 'w_emit': 0.5, 'train_top1': np.float64(0.945282322548899)}
+{'beta': 10, 'w_emit': 1.0, 'train_top1': np.float64(0.9432156476811416)}
+{'beta': 10, 'w_emit': 2.0, 'train_top1': np.float64(0.9410013531799729)}
+{'beta': 10, 'w_emit': 4.0, 'train_top1': np.float64(0.9377291179726903)}
+{'beta': 20, 'w_emit': 0.5, 'train_top1': np.float64(0.9432156476811416)}
+{'beta': 20, 'w_emit': 1.0, 'train_top1': np.float64(0.9410013531799729)}
+{'beta': 20, 'w_emit': 2.0, 'train_top1': np.float64(0.9377291179726903)}
+{'beta': 20, 'w_emit': 4.0, 'train_top1': np.float64(0.9362775249108132)}
+{'beta': 50, 'w_emit': 0.5, 'train_top1': np.float64(0.9401156353795055)}
+{'beta': 50, 'w_emit': 1.0, 'train_top1': np.float64(0.9371632427112806)}
+{'beta': 50, 'w_emit': 2.0, 'train_top1': np.float64(0.9357608561938738)}
+{'beta': 50, 'w_emit': 4.0, 'train_top1': np.float64(0.9342846598597614)}
+decoder params {'beta': 1.0, 'w_emit': 4.0, 'sigma': 2.0, 'max_gap_s': 60.0}
+                points  continuity  route_f1    top1
+method                                              
+nearest          19160      0.7955    0.5836  0.5353
+classifier       19160      0.9394    0.8968  0.8924
+hmm_distance     19160      0.9749    0.9144  0.9350
+classifier_hmm   19160      0.9774    0.9334  0.9266
+method    classifier  classifier_hmm  hmm_distance  nearest
+trip                                                       
+00000000       0.956           0.979         0.962    0.546
+00000007       0.979           0.999         0.993    0.453
+00000009       0.885           0.921         0.863    0.405
+00000040       0.934           0.947         0.977    0.531
+00000052       0.985           0.996         0.981    0.779
+00000056       0.922           0.962         0.949    0.681
+00000065       0.862           0.841         0.840    0.719
+00000076       0.932           0.977         0.906    0.418
+00000077       0.741           0.804         0.899    0.428
+00000091       0.913           0.957         0.927    0.592
