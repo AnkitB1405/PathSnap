@@ -1,0 +1,24 @@
+gaussian_nb fold 0: top1=0.8530 macroF1=0.8686
+gaussian_nb fold 1: top1=0.8555 macroF1=0.8607
+gaussian_nb fold 2: top1=0.8937 macroF1=0.8748
+gaussian_nb fold 3: top1=0.8970 macroF1=0.8825
+gaussian_nb fold 4: top1=0.8365 macroF1=0.8728
+{
+ "model": "gaussian_nb",
+ "family": "Probabilistic",
+ "config": "default var_smoothing=1e-9",
+ "cv_macro_f1": 0.8718796636484486,
+ "cv_macro_f1_std": 0.00800616807665018,
+ "cv_top1": 0.8671298917303123,
+ "cv_log_loss": 0.3640252056299743,
+ "train_top1": 0.8683236931136091,
+ "train_macro_f1": 0.8722160105420526,
+ "test_top1": 0.8618997912317328,
+ "test_macro_f1": 0.8578203521506856,
+ "test_precision": 0.8299174507616256,
+ "test_recall": 0.8982383180453098,
+ "test_log_loss": 0.4120278920885362,
+ "test_continuity": 0.9144723557340839,
+ "train_time_s": 0.20073723793029785,
+ "infer_ms_per_point": 0.0007926920012790624
+}
