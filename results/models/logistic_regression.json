@@ -14,8 +14,8 @@
  "test_recall": 0.9068214588328805,
  "test_log_loss": 0.14249705484232175,
  "test_continuity": 0.9169295130976447,
- "train_time_s": 1.5269060134887695,
- "infer_ms_per_point": 0.0005375990539104804,
+ "train_time_s": 1.4620404243469238,
+ "infer_ms_per_point": 0.0007905392656744397,
  "cv_folds": [
   {
    "macro_f1": 0.9020851604816866,

@@ -1,0 +1,24 @@
+logistic_regression fold 0: top1=0.8548 macroF1=0.9021
+logistic_regression fold 1: top1=0.8679 macroF1=0.9077
+logistic_regression fold 2: top1=0.8986 macroF1=0.9163
+logistic_regression fold 3: top1=0.9023 macroF1=0.9226
+logistic_regression fold 4: top1=0.8452 macroF1=0.9077
+{
+ "model": "logistic_regression",
+ "family": "Linear",
+ "config": "StandardScaler + L2, C=1.0, class_weight=None",
+ "cv_macro_f1": 0.9112696121696006,
+ "cv_macro_f1_std": 0.008133299633071583,
+ "cv_top1": 0.8737756172734104,
+ "cv_log_loss": 0.1435585166454268,
+ "train_top1": 0.8742988104332642,
+ "train_macro_f1": 0.9123766592123076,
+ "test_top1": 0.8671711899791231,
+ "test_macro_f1": 0.9060568518614172,
+ "test_precision": 0.9052971348194584,
+ "test_recall": 0.9068214588328805,
+ "test_log_loss": 0.14249705484232175,
+ "test_continuity": 0.9169295130976447,
+ "train_time_s": 1.4620404243469238,
+ "infer_ms_per_point": 0.0007905392656744397
+}

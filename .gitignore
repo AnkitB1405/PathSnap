@@ -7,5 +7,4 @@ Student folder/
 # large intermediate files
 results/*.pkl
 results/models/*.pkl
-models/*.joblib
-!models/final_model.joblib
+models/lightgbm_tuned.joblib

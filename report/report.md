@@ -318,12 +318,23 @@ Code: `scripts/make_maps.py`. The HTML maps are in `maps/`. Layers: GPS points (
 
 ![](img/api_curl.png)
 
-# 8. Limitations
+# 8. Strengths and Limitations of Our Approach
+
+Strengths:
+
+- The classifier looks at more than distance (heading, neighbouring points), so it handles parallel roads and the two directions of a road much better than snapping to the nearest arc (Top-1 0.892 vs 0.535).
+- The HMM adds road connectivity, so the final route is almost always connected (continuity 0.977) and short wrong jumps are removed.
+- Everything is checked trip-wise: CV folds never split a trip, tuning used only train trips, and the decoder was tuned on out-of-fold probabilities.
+- It is fast enough for the demo: 1-3 s per trip on the API.
+
+Limitations:
 
 - The labels come from our own alignment of the route to the GPS points, so they can be wrong near junctions and on very short arcs.
 - Two train trips were dropped because their GPS is shifted 120-140 m from the route.
 - Candidates are limited to 50 m. Very noisy points have no correct candidate (0.4% on student_test).
 - The decoder settings were tuned only on 20 train trips.
+- On a few trips (65, 77) the HMM trusts confident but wrong classifier scores. The simpler distance-only HMM did better there.
+- Tuning gave only a small gain and made the model overfit more (train Top-1 0.957 vs test 0.892).
 
 # 9. AI use
 

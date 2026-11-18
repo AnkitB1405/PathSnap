@@ -58,6 +58,14 @@ python scripts/make_maps.py eda               # folium maps
 python scripts/make_maps.py results
 ```
 
+## Saved models
+
+- `models/final_model.joblib` - tuned LightGBM used by the API
+- `models/hmm_config.json` - HMM decoder settings
+- `models/<model>.joblib` - the other trained models (logistic_regression, gaussian_nb, knn, random_forest, lightgbm, mlp)
+
+Results for every model (config, CV folds, test metrics, timings) are in `results/models/<model>.json`, with logs in `results/models/log_<model>.txt`. The Optuna search record is in `results/optuna_trials.csv`. All runs use seed 42.
+
 ## Deployment (two laptops)
 
 Laptop 1 (model + API). Copy the repo, the trained `models/` folder and the evaluation trips. The eval trips go in a partition folder, for example `Student folder/eval_test/<trip_id>/<trip_id>.track|nodes|arcs|route`.
