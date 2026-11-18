@@ -68,15 +68,17 @@ Results for every model (config, CV folds, test metrics, timings) are in `result
 
 ## Deployment (two laptops)
 
-Laptop 1 (model + API). Copy the repo, the trained `models/` folder and the evaluation trips. The eval trips go in a partition folder, for example `Student folder/eval_test/<trip_id>/<trip_id>.track|nodes|arcs|route`.
+Laptop 1 (model + API). Copy the repo with the `models/` folder and the data. By default the API offers two test sets:
+
+- `student_test` from `Student folder/student_test`
+- `evaluator_test` from an `evaluator_test` folder next to `Student folder`
 
 ```
 export PATHSNAP_DATA="/path/to/Student folder"   # Windows: set PATHSNAP_DATA=...
-export PATHSNAP_EVAL=eval_test                    # default is student_test
 uvicorn api.app:app --host 0.0.0.0 --port 8000
 ```
 
-Find the Laptop 1 IP (`ipconfig` / `ip a`) and allow port 8000 through the firewall. Every request is printed in this terminal.
+Other folders can be given with `PATHSNAP_SETS="student_test=/path/a;evaluator_test=/path/b"`. Find the Laptop 1 IP (`ipconfig` / `ip a`) and allow port 8000 through the firewall. Every request is printed in this terminal.
 
 Laptop 2 (UI). Only the `ui/` folder is needed.
 
@@ -85,12 +87,13 @@ cd ui
 python -m http.server 5500
 ```
 
-Open `http://localhost:5500`, type `http://<laptop1-ip>:8000` in the API address box, press Load trips and click a trip.
+Open `http://localhost:5500`, type `http://<laptop1-ip>:8000` in the API address box and press Connect. Pick a test set, then click a trip, or use "Run all trips in this set" for a summary of the whole set.
 
 API endpoints:
 
 - `GET /health`
-- `GET /trips` - the trip ids in the eval partition
-- `POST /predict` with `{"trip_id": "00000040"}` - predicted route, GPS points and accuracy computed on the server
+- `GET /sets` - the available test sets
+- `GET /trips?set=student_test` - trip ids and point counts in a set
+- `POST /predict` with `{"trip_id": "00000040", "set": "student_test"}` - predicted route, classifier-only route, GPS points and accuracy computed on the server
 
 The reference route is only read inside the API for scoring. It is never sent to the model or the UI.

@@ -836,10 +836,13 @@ the trip, runs candidates → LightGBM → Viterbi, and then scores the
 result against the reference route on the server. The reference route is
 never sent to the UI and never given to the model. Every request is
 printed in the terminal.</li>
-<li>Laptop 2 serves <code>ui/index.html</code>. It lists the trips from
-<code>GET /trips</code>, sends the chosen trip id to
-<code>/predict</code>, and draws the GPS points and predicted route with
-the accuracy table.</li>
+<li>Laptop 2 serves <code>ui/index.html</code>. You choose a test set
+(student_test or evaluator_test, from <code>GET /sets</code>) and a trip
+(from <code>GET /trips</code>). The UI sends the trip id and set to
+<code>/predict</code>, then draws the GPS points, the predicted route
+and the classifier-only route, and shows the accuracy of classifier +
+HMM vs classifier only. “Run all trips” runs the whole set and shows the
+overall accuracy.</li>
 <li>Run instructions are in the README.</li>
 </ul>
 <p><img src="img/ui_1.png" /></p>

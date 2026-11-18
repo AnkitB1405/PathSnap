@@ -307,7 +307,7 @@ Code: `scripts/make_maps.py`. The HTML maps are in `maps/`. Layers: GPS points (
 # 7. API, UI and Deployment
 
 - Laptop 1 runs the FastAPI server (`api/app.py`). It loads `models/final_model.joblib` and `models/hmm_config.json` at startup. `POST /predict` loads only the track and the road network for the trip, runs candidates → LightGBM → Viterbi, and then scores the result against the reference route on the server. The reference route is never sent to the UI and never given to the model. Every request is printed in the terminal.
-- Laptop 2 serves `ui/index.html`. It lists the trips from `GET /trips`, sends the chosen trip id to `/predict`, and draws the GPS points and predicted route with the accuracy table.
+- Laptop 2 serves `ui/index.html`. You choose a test set (student_test or evaluator_test, from `GET /sets`) and a trip (from `GET /trips`). The UI sends the trip id and set to `/predict`, then draws the GPS points, the predicted route and the classifier-only route, and shows the accuracy of classifier + HMM vs classifier only. "Run all trips" runs the whole set and shows the overall accuracy.
 - Run instructions are in the README.
 
 ![](img/ui_1.png)
