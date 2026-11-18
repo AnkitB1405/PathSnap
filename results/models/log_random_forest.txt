@@ -1,0 +1,24 @@
+random_forest fold 0: top1=0.8643 macroF1=0.9293
+random_forest fold 1: top1=0.8847 macroF1=0.9339
+random_forest fold 2: top1=0.9073 macroF1=0.9356
+random_forest fold 3: top1=0.9191 macroF1=0.9493
+random_forest fold 4: top1=0.8606 macroF1=0.9276
+{
+ "model": "random_forest",
+ "family": "Ensemble (bagging)",
+ "config": "200 trees, max_depth=14, min_samples_leaf=20",
+ "cv_macro_f1": 0.9351342051502469,
+ "cv_macro_f1_std": 0.008581157158896515,
+ "cv_top1": 0.8871949982585285,
+ "cv_log_loss": 0.09483355860090852,
+ "train_top1": 0.9098766779439048,
+ "train_macro_f1": 0.9485341997207006,
+ "test_top1": 0.8862212943632568,
+ "test_macro_f1": 0.9273631239661674,
+ "test_precision": 0.9366797093695854,
+ "test_recall": 0.9186738552414668,
+ "test_log_loss": 0.09534623971755406,
+ "test_continuity": 0.9322249402611046,
+ "train_time_s": 48.24290060997009,
+ "infer_ms_per_point": 0.009301136829161196
+}

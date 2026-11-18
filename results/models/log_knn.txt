@@ -1,0 +1,24 @@
+knn fold 0: top1=0.8551 macroF1=0.9185
+knn fold 1: top1=0.8714 macroF1=0.9239
+knn fold 2: top1=0.8914 macroF1=0.9238
+knn fold 3: top1=0.9049 macroF1=0.9370
+knn fold 4: top1=0.8447 macroF1=0.9186
+{
+ "model": "knn",
+ "family": "Instance-based",
+ "config": "k=25, distance weights, scaled, 150k-row sample",
+ "cv_macro_f1": 0.9243381123632378,
+ "cv_macro_f1_std": 0.007536472632102535,
+ "cv_top1": 0.873517012731942,
+ "cv_log_loss": 0.1637305104181681,
+ "train_top1": 0.9080541307432064,
+ "train_macro_f1": 0.9425286607590446,
+ "test_top1": 0.8704592901878915,
+ "test_macro_f1": 0.9187786096215254,
+ "test_precision": 0.9226794854316605,
+ "test_recall": 0.9149961322473845,
+ "test_log_loss": 0.15984161606668953,
+ "test_continuity": 0.9211040559682029,
+ "train_time_s": 0.3307623863220215,
+ "infer_ms_per_point": 3.1781993230847574
+}
