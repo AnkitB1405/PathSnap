@@ -1,0 +1,26 @@
+/home/shadow_e15/College/ML-Hackathon/PathSnap/.venv/lib/python3.14/site-packages/lightgbm/sklearn.py:1106: LGBMDeprecationWarning: The argument 'eval_set' is deprecated, use 'eval_X' and 'eval_y' instead.
+  eval_set = _validate_eval_set_Xy(eval_set=eval_set, eval_X=eval_X, eval_y=eval_y)
+lightgbm fold 0: top1=0.8659 macroF1=0.9296
+lightgbm fold 1: top1=0.8874 macroF1=0.9325
+lightgbm fold 2: top1=0.9069 macroF1=0.9371
+lightgbm fold 3: top1=0.9234 macroF1=0.9515
+lightgbm fold 4: top1=0.8620 macroF1=0.9282
+{
+ "model": "lightgbm",
+ "family": "Boosting",
+ "config": "400 rounds, lr=0.05, 31 leaves (defaults otherwise)",
+ "cv_macro_f1": 0.9357929894703751,
+ "cv_macro_f1_std": 0.009424359200221818,
+ "cv_top1": 0.8891196032072288,
+ "cv_log_loss": 0.09557400718949569,
+ "train_top1": 0.9197042453344975,
+ "train_macro_f1": 0.9544020083101565,
+ "test_top1": 0.8900313152400835,
+ "test_macro_f1": 0.9309575543704643,
+ "test_precision": 0.9321677363109984,
+ "test_recall": 0.9297586793224335,
+ "test_log_loss": 0.09571521214093662,
+ "test_continuity": 0.9395924107899865,
+ "train_time_s": 4.668693780899048,
+ "infer_ms_per_point": 0.008332704452482792
+}
