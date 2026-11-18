@@ -1,0 +1,8 @@
+              model             family  cv_macro_f1  cv_macro_f1_std  train_top1  test_top1  test_macro_f1  test_precision  test_recall  test_log_loss  test_continuity  train_time_s  infer_ms_per_point
+logistic_regression             Linear       0.9113           0.0081      0.8743     0.8672         0.9061          0.9053       0.9068         0.1425           0.9169        1.5269              0.0005
+        gaussian_nb      Probabilistic       0.8719           0.0080      0.8683     0.8619         0.8578          0.8299       0.8982         0.4120           0.9145        0.2007              0.0008
+                knn     Instance-based       0.9243           0.0075      0.9081     0.8705         0.9188          0.9227       0.9150         0.1598           0.9211        0.3308              3.1782
+      random_forest Ensemble (bagging)       0.9351           0.0086      0.9099     0.8862         0.9274          0.9367       0.9187         0.0953           0.9322       48.2429              0.0093
+           lightgbm           Boosting       0.9358           0.0094      0.9197     0.8900         0.9310          0.9322       0.9298         0.0957           0.9396        4.6687              0.0083
+                mlp     Neural network       0.9311           0.0087      0.9019     0.8862         0.9275          0.9297       0.9254         0.0998           0.9342       82.7443              0.0060
+     lightgbm_tuned           Boosting       0.9374           0.0104      0.9566     0.8924         0.9319          0.9346       0.9293         0.0963           0.9394       19.5050              0.0333
