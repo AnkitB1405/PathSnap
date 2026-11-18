@@ -1,0 +1,26 @@
+/home/shadow_e15/College/ML-Hackathon/PathSnap/.venv/lib/python3.14/site-packages/sklearn/neural_network/_multilayer_perceptron.py:785: ConvergenceWarning: Stochastic Optimizer: Maximum iterations (60) reached and the optimization hasn't converged yet.
+  warnings.warn(
+mlp fold 0: top1=0.8633 macroF1=0.9268
+mlp fold 1: top1=0.8826 macroF1=0.9298
+mlp fold 2: top1=0.8991 macroF1=0.9314
+mlp fold 3: top1=0.9159 macroF1=0.9452
+mlp fold 4: top1=0.8544 macroF1=0.9220
+{
+ "model": "mlp",
+ "family": "Neural network",
+ "config": "64-32 ReLU, Adam lr=1e-3, early stopping (10% val)",
+ "cv_macro_f1": 0.931055501130935,
+ "cv_macro_f1_std": 0.008678460949277572,
+ "cv_top1": 0.8830578941464559,
+ "cv_log_loss": 0.10645093428018329,
+ "train_top1": 0.9019316817636145,
+ "train_macro_f1": 0.9442456009136465,
+ "test_top1": 0.886169102296451,
+ "test_macro_f1": 0.927523230936028,
+ "test_precision": 0.9297243787371657,
+ "test_recall": 0.9253594854846292,
+ "test_log_loss": 0.09978699173859924,
+ "test_continuity": 0.9342302696852063,
+ "train_time_s": 82.74431538581848,
+ "infer_ms_per_point": 0.0059951820054980065
+}
