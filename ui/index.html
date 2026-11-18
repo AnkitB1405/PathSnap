@@ -89,7 +89,13 @@ async function run(id, btn) {
     status('Trip ' + id + ' done');
   } catch (e) { status('Error: ' + e); }
 }
-loadTrips();
+// optional: index.html?api=http://host:8000&trip=00000040 opens a trip directly
+const q = new URLSearchParams(location.search);
+if (q.get('api')) document.getElementById('api').value = q.get('api');
+loadTrips().then(() => {
+  const b = [...document.querySelectorAll('.trip')].find(x => x.textContent === 'Trip ' + q.get('trip'));
+  if (b) b.click();
+});
 </script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+2026-11-18 11:19:38,835 model loaded: LGBMClassifier | hmm params {'beta': 1.0, 'w_emit': 4.0, 'sigma': 2.0, 'max_gap_s': 60.0} | eval partition student_test (10 trips)
+INFO:     Started server process [126216]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:55846 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55848 - "GET /trips HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55848 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 11:19:43,054 PREDICT from 127.0.0.1 trip=00000040 points=2995 time=2.21s accuracy(hmm)=0.9466 accuracy(clf)=0.9339 continuity=0.9957 route_f1=0.9721
+INFO:     127.0.0.1:55858 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45728 - "GET /trips HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45728 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 11:19:49,186 PREDICT from 127.0.0.1 trip=00000077 points=3911 time=2.91s accuracy(hmm)=0.8041 accuracy(clf)=0.7415 continuity=0.9934 route_f1=0.9433
+INFO:     127.0.0.1:45730 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55468 - "GET /trips HTTP/1.1" 200 OK
+2026-11-18 11:20:03,275 PREDICT from 127.0.0.1 trip=00000009 points=1049 time=0.95s accuracy(hmm)=0.9209 accuracy(clf)=0.8847 continuity=0.9437 route_f1=0.8864
+INFO:     127.0.0.1:55478 - "POST /predict HTTP/1.1" 200 OK

@@ -1,0 +1,9 @@
+body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 11pt; line-height: 1.45; max-width: 900px; margin: auto; color: #111; }
+h1 { font-size: 17pt; border-bottom: 1px solid #999; margin-top: 28px; }
+h2 { font-size: 14pt; } h3 { font-size: 12pt; }
+table { border-collapse: collapse; margin: 10px 0; font-size: 9.5pt; }
+th, td { border: 1px solid #888; padding: 3px 6px; }
+img { max-width: 100%; display: block; margin: 10px auto; }
+figure { margin: 0; } figcaption { display: none; }
+code { font-size: 9.5pt; }
+header { text-align: center; }
