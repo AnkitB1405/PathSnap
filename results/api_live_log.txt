@@ -1,0 +1,200 @@
+2026-11-18 13:16:08,357 model loaded: LGBMClassifier | hmm params {'beta': 1.0, 'w_emit': 4.0, 'sigma': 2.0, 'max_gap_s': 60.0}
+2026-11-18 13:16:08,357 test set student_test: 10 trips (/home/shadow_e15/College/ML-Hackathon/Student folder/student_test)
+2026-11-18 13:16:08,357 test set evaluator_test: 10 trips (/home/shadow_e15/College/ML-Hackathon/evaluator_test)
+INFO:     Started server process [406361]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51648 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51664 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51670 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51686 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51686 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51686 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 13:16:10,868 PREDICT from 127.0.0.1 set=student_test trip=00000009 points=1049 time=0.91s accuracy(hmm)=0.9209 accuracy(clf)=0.8847 continuity=0.9437 route_f1=0.8864
+INFO:     127.0.0.1:51692 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50390 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50390 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50390 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 13:16:36,354 PREDICT from 127.0.0.1 set=student_test trip=00000040 points=2995 time=1.74s accuracy(hmm)=0.9466 accuracy(clf)=0.9339 continuity=0.9957 route_f1=0.9721
+INFO:     127.0.0.1:50402 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50408 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50408 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50408 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 13:16:40,013 PREDICT from 127.0.0.1 set=student_test trip=00000077 points=3911 time=2.49s accuracy(hmm)=0.8041 accuracy(clf)=0.7415 continuity=0.9934 route_f1=0.9433
+INFO:     127.0.0.1:50420 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48818 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48818 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48818 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 13:16:54,322 PREDICT from 127.0.0.1 set=student_test trip=00000040 points=2995 time=1.80s accuracy(hmm)=0.9466 accuracy(clf)=0.9339 continuity=0.9957 route_f1=0.9721
+INFO:     127.0.0.1:48834 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48838 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48838 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48838 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 13:16:58,687 PREDICT from 127.0.0.1 set=student_test trip=00000077 points=3911 time=2.98s accuracy(hmm)=0.8041 accuracy(clf)=0.7415 continuity=0.9934 route_f1=0.9433
+INFO:     127.0.0.1:48850 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34778 - "OPTIONS /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34778 - "POST /predict HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:34778 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34778 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34778 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34778 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+2026-11-18 13:34:58,307 PREDICT from 127.0.0.1 set=student_test trip=00000007 points=1354 time=0.57s accuracy(hmm)=0.9993 accuracy(clf)=0.9793 continuity=1.0000 route_f1=0.9918
+INFO:     127.0.0.1:34778 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:03,530 PREDICT from 127.0.0.1 set=student_test trip=00000056 points=3958 time=2.72s accuracy(hmm)=0.9624 accuracy(clf)=0.9224 continuity=0.9649 route_f1=0.9296
+INFO:     127.0.0.1:34778 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34778 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+2026-11-18 13:35:06,450 PREDICT from 127.0.0.1 set=evaluator_test trip=00000023 points=458 time=0.34s accuracy(hmm)=0.9629 accuracy(clf)=0.9498 continuity=0.9759 route_f1=0.9016
+INFO:     127.0.0.1:34778 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43740 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43740 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43740 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+2026-11-18 13:35:30,984 PREDICT from 127.0.0.1 set=student_test trip=00000000 points=2503 time=1.38s accuracy(hmm)=0.9788 accuracy(clf)=0.9565 continuity=0.9960 route_f1=0.9638
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:31,667 PREDICT from 127.0.0.1 set=student_test trip=00000007 points=1354 time=0.62s accuracy(hmm)=0.9993 accuracy(clf)=0.9793 continuity=1.0000 route_f1=0.9918
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:32,630 PREDICT from 127.0.0.1 set=student_test trip=00000009 points=1049 time=0.84s accuracy(hmm)=0.9209 accuracy(clf)=0.8847 continuity=0.9437 route_f1=0.8864
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:34,529 PREDICT from 127.0.0.1 set=student_test trip=00000040 points=2995 time=1.69s accuracy(hmm)=0.9466 accuracy(clf)=0.9339 continuity=0.9957 route_f1=0.9721
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:34,731 PREDICT from 127.0.0.1 set=student_test trip=00000052 points=262 time=0.17s accuracy(hmm)=0.9962 accuracy(clf)=0.9847 continuity=0.9617 route_f1=0.9266
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:38,400 PREDICT from 127.0.0.1 set=student_test trip=00000056 points=3958 time=2.68s accuracy(hmm)=0.9624 accuracy(clf)=0.9224 continuity=0.9649 route_f1=0.9296
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:39,157 PREDICT from 127.0.0.1 set=student_test trip=00000065 points=768 time=0.69s accuracy(hmm)=0.8411 accuracy(clf)=0.8620 continuity=0.9791 route_f1=0.9371
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:41,298 PREDICT from 127.0.0.1 set=student_test trip=00000076 points=1486 time=1.95s accuracy(hmm)=0.9771 accuracy(clf)=0.9320 continuity=0.9697 route_f1=0.9164
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:44,472 PREDICT from 127.0.0.1 set=student_test trip=00000077 points=3911 time=2.92s accuracy(hmm)=0.8041 accuracy(clf)=0.7415 continuity=0.9934 route_f1=0.9433
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 13:35:45,282 PREDICT from 127.0.0.1 set=student_test trip=00000091 points=874 time=0.72s accuracy(hmm)=0.9565 accuracy(clf)=0.9130 continuity=0.9702 route_f1=0.8668
+INFO:     127.0.0.1:43740 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36728 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36728 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36728 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36728 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36728 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53282 - "GET /sets HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53282 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     10.1.24.235:56156 - "GET /sets HTTP/1.1" 200 OK
+INFO:     10.1.24.235:56156 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     10.1.24.235:56156 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 14:52:19,918 PREDICT from 10.1.24.235 set=student_test trip=00000000 points=2503 time=1.35s accuracy(hmm)=0.9788 accuracy(clf)=0.9565 continuity=0.9960 route_f1=0.9638
+INFO:     10.1.24.235:64047 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:52:23,600 PREDICT from 10.1.24.235 set=student_test trip=00000007 points=1354 time=0.58s accuracy(hmm)=0.9993 accuracy(clf)=0.9793 continuity=1.0000 route_f1=0.9918
+INFO:     10.1.24.235:64047 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:52:27,003 PREDICT from 10.1.24.235 set=student_test trip=00000009 points=1049 time=0.88s accuracy(hmm)=0.9209 accuracy(clf)=0.8847 continuity=0.9437 route_f1=0.8864
+INFO:     10.1.24.235:64047 - "POST /predict HTTP/1.1" 200 OK
+INFO:     10.1.24.235:64047 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     10.1.24.235:64047 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     10.1.24.235:60753 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+2026-11-18 14:52:53,091 PREDICT from 10.1.24.235 set=evaluator_test trip=00000015 points=6854 time=3.80s accuracy(hmm)=0.9155 accuracy(clf)=0.8173 continuity=0.9978 route_f1=0.8822
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:52:56,132 PREDICT from 10.1.24.235 set=evaluator_test trip=00000017 points=1346 time=1.79s accuracy(hmm)=0.9495 accuracy(clf)=0.9287 continuity=0.8758 route_f1=0.8479
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:52:57,165 PREDICT from 10.1.24.235 set=evaluator_test trip=00000023 points=458 time=0.33s accuracy(hmm)=0.9629 accuracy(clf)=0.9498 continuity=0.9759 route_f1=0.9016
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:52:57,945 PREDICT from 10.1.24.235 set=evaluator_test trip=00000030 points=654 time=0.65s accuracy(hmm)=0.8838 accuracy(clf)=0.8287 continuity=0.9096 route_f1=0.7960
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:53:00,306 PREDICT from 10.1.24.235 set=evaluator_test trip=00000049 points=2642 time=1.82s accuracy(hmm)=0.9943 accuracy(clf)=0.9913 continuity=0.9932 route_f1=0.9740
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:53:01,840 PREDICT from 10.1.24.235 set=evaluator_test trip=00000059 points=1031 time=0.94s accuracy(hmm)=0.9806 accuracy(clf)=0.9583 continuity=0.9301 route_f1=0.8610
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:53:02,658 PREDICT from 10.1.24.235 set=evaluator_test trip=00000067 points=916 time=0.49s accuracy(hmm)=0.9694 accuracy(clf)=0.9607 continuity=0.9913 route_f1=0.9487
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:53:03,947 PREDICT from 10.1.24.235 set=evaluator_test trip=00000073 points=1144 time=0.86s accuracy(hmm)=0.9895 accuracy(clf)=0.9860 continuity=0.9904 route_f1=0.9742
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:53:06,286 PREDICT from 10.1.24.235 set=evaluator_test trip=00000087 points=1399 time=1.93s accuracy(hmm)=0.9971 accuracy(clf)=0.9564 continuity=0.9893 route_f1=0.9810
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:53:09,216 PREDICT from 10.1.24.235 set=evaluator_test trip=00000094 points=3230 time=2.12s accuracy(hmm)=0.9625 accuracy(clf)=0.9427 continuity=0.9789 route_f1=0.9402
+INFO:     10.1.24.235:60753 - "POST /predict HTTP/1.1" 200 OK
+INFO:     10.1.24.235:57541 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+2026-11-18 14:54:22,459 PREDICT from 10.1.24.235 set=student_test trip=00000000 points=2503 time=1.37s accuracy(hmm)=0.9788 accuracy(clf)=0.9565 continuity=0.9960 route_f1=0.9638
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:23,471 PREDICT from 10.1.24.235 set=student_test trip=00000007 points=1354 time=0.67s accuracy(hmm)=0.9993 accuracy(clf)=0.9793 continuity=1.0000 route_f1=0.9918
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:24,500 PREDICT from 10.1.24.235 set=student_test trip=00000009 points=1049 time=0.85s accuracy(hmm)=0.9209 accuracy(clf)=0.8847 continuity=0.9437 route_f1=0.8864
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:26,633 PREDICT from 10.1.24.235 set=student_test trip=00000040 points=2995 time=1.75s accuracy(hmm)=0.9466 accuracy(clf)=0.9339 continuity=0.9957 route_f1=0.9721
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:27,127 PREDICT from 10.1.24.235 set=student_test trip=00000052 points=262 time=0.18s accuracy(hmm)=0.9962 accuracy(clf)=0.9847 continuity=0.9617 route_f1=0.9266
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:30,740 PREDICT from 10.1.24.235 set=student_test trip=00000056 points=3958 time=2.68s accuracy(hmm)=0.9624 accuracy(clf)=0.9224 continuity=0.9649 route_f1=0.9296
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:32,103 PREDICT from 10.1.24.235 set=student_test trip=00000065 points=768 time=0.59s accuracy(hmm)=0.8411 accuracy(clf)=0.8620 continuity=0.9791 route_f1=0.9371
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:34,026 PREDICT from 10.1.24.235 set=student_test trip=00000076 points=1486 time=1.63s accuracy(hmm)=0.9771 accuracy(clf)=0.9320 continuity=0.9697 route_f1=0.9164
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:36,797 PREDICT from 10.1.24.235 set=student_test trip=00000077 points=3911 time=2.51s accuracy(hmm)=0.8041 accuracy(clf)=0.7415 continuity=0.9934 route_f1=0.9433
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:54:37,657 PREDICT from 10.1.24.235 set=student_test trip=00000091 points=874 time=0.63s accuracy(hmm)=0.9565 accuracy(clf)=0.9130 continuity=0.9702 route_f1=0.8668
+INFO:     10.1.24.235:57541 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50542 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50542 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:12,482 PREDICT from 127.0.0.1 set=evaluator_test trip=00000015 points=6854 time=3.93s accuracy(hmm)=0.9155 accuracy(clf)=0.8173 continuity=0.9978 route_f1=0.8822
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:14,618 PREDICT from 127.0.0.1 set=evaluator_test trip=00000017 points=1346 time=1.87s accuracy(hmm)=0.9495 accuracy(clf)=0.9287 continuity=0.8758 route_f1=0.8479
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:14,989 PREDICT from 127.0.0.1 set=evaluator_test trip=00000023 points=458 time=0.34s accuracy(hmm)=0.9629 accuracy(clf)=0.9498 continuity=0.9759 route_f1=0.9016
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:15,742 PREDICT from 127.0.0.1 set=evaluator_test trip=00000030 points=654 time=0.68s accuracy(hmm)=0.8838 accuracy(clf)=0.8287 continuity=0.9096 route_f1=0.7960
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:17,874 PREDICT from 127.0.0.1 set=evaluator_test trip=00000049 points=2642 time=1.90s accuracy(hmm)=0.9943 accuracy(clf)=0.9913 continuity=0.9932 route_f1=0.9740
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:18,933 PREDICT from 127.0.0.1 set=evaluator_test trip=00000059 points=1031 time=0.93s accuracy(hmm)=0.9806 accuracy(clf)=0.9583 continuity=0.9301 route_f1=0.8610
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:19,555 PREDICT from 127.0.0.1 set=evaluator_test trip=00000067 points=916 time=0.59s accuracy(hmm)=0.9694 accuracy(clf)=0.9607 continuity=0.9913 route_f1=0.9487
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:20,513 PREDICT from 127.0.0.1 set=evaluator_test trip=00000073 points=1144 time=0.88s accuracy(hmm)=0.9895 accuracy(clf)=0.9860 continuity=0.9904 route_f1=0.9742
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:22,576 PREDICT from 127.0.0.1 set=evaluator_test trip=00000087 points=1399 time=1.89s accuracy(hmm)=0.9971 accuracy(clf)=0.9564 continuity=0.9893 route_f1=0.9810
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 14:55:25,154 PREDICT from 127.0.0.1 set=evaluator_test trip=00000094 points=3230 time=2.18s accuracy(hmm)=0.9625 accuracy(clf)=0.9427 continuity=0.9789 route_f1=0.9402
+INFO:     127.0.0.1:50542 - "POST /predict HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49650 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49650 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49650 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:48,387 PREDICT from 127.0.0.1 set=evaluator_test trip=00000015 points=6854 time=3.95s accuracy(hmm)=0.9155 accuracy(clf)=0.8173 continuity=0.9978 route_f1=0.8822
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:50,343 PREDICT from 127.0.0.1 set=evaluator_test trip=00000017 points=1346 time=1.69s accuracy(hmm)=0.9495 accuracy(clf)=0.9287 continuity=0.8758 route_f1=0.8479
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:50,784 PREDICT from 127.0.0.1 set=evaluator_test trip=00000023 points=458 time=0.41s accuracy(hmm)=0.9629 accuracy(clf)=0.9498 continuity=0.9759 route_f1=0.9016
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:51,496 PREDICT from 127.0.0.1 set=evaluator_test trip=00000030 points=654 time=0.64s accuracy(hmm)=0.8838 accuracy(clf)=0.8287 continuity=0.9096 route_f1=0.7960
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:53,521 PREDICT from 127.0.0.1 set=evaluator_test trip=00000049 points=2642 time=1.80s accuracy(hmm)=0.9943 accuracy(clf)=0.9913 continuity=0.9932 route_f1=0.9740
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:54,555 PREDICT from 127.0.0.1 set=evaluator_test trip=00000059 points=1031 time=0.91s accuracy(hmm)=0.9806 accuracy(clf)=0.9583 continuity=0.9301 route_f1=0.8610
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:55,087 PREDICT from 127.0.0.1 set=evaluator_test trip=00000067 points=916 time=0.49s accuracy(hmm)=0.9694 accuracy(clf)=0.9607 continuity=0.9913 route_f1=0.9487
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:56,149 PREDICT from 127.0.0.1 set=evaluator_test trip=00000073 points=1144 time=0.98s accuracy(hmm)=0.9895 accuracy(clf)=0.9860 continuity=0.9904 route_f1=0.9742
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:29:58,129 PREDICT from 127.0.0.1 set=evaluator_test trip=00000087 points=1399 time=1.80s accuracy(hmm)=0.9971 accuracy(clf)=0.9564 continuity=0.9893 route_f1=0.9810
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:30:00,723 PREDICT from 127.0.0.1 set=evaluator_test trip=00000094 points=3230 time=2.20s accuracy(hmm)=0.9625 accuracy(clf)=0.9427 continuity=0.9789 route_f1=0.9402
+INFO:     127.0.0.1:49650 - "POST /predict HTTP/1.1" 200 OK
+INFO:     10.1.24.235:62185 - "GET /sets HTTP/1.1" 200 OK
+INFO:     10.1.24.235:62185 - "GET /trips?set=student_test HTTP/1.1" 200 OK
+INFO:     10.1.24.235:60090 - "GET /trips?set=evaluator_test HTTP/1.1" 200 OK
+INFO:     10.1.24.235:60090 - "OPTIONS /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:18,256 PREDICT from 10.1.24.235 set=evaluator_test trip=00000015 points=6854 time=4.30s accuracy(hmm)=0.9155 accuracy(clf)=0.8173 continuity=0.9978 route_f1=0.8822
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:20,802 PREDICT from 10.1.24.235 set=evaluator_test trip=00000017 points=1346 time=1.78s accuracy(hmm)=0.9495 accuracy(clf)=0.9287 continuity=0.8758 route_f1=0.8479
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:21,516 PREDICT from 10.1.24.235 set=evaluator_test trip=00000023 points=458 time=0.51s accuracy(hmm)=0.9629 accuracy(clf)=0.9498 continuity=0.9759 route_f1=0.9016
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:22,572 PREDICT from 10.1.24.235 set=evaluator_test trip=00000030 points=654 time=0.81s accuracy(hmm)=0.8838 accuracy(clf)=0.8287 continuity=0.9096 route_f1=0.7960
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:24,861 PREDICT from 10.1.24.235 set=evaluator_test trip=00000049 points=2642 time=1.96s accuracy(hmm)=0.9943 accuracy(clf)=0.9913 continuity=0.9932 route_f1=0.9740
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:26,299 PREDICT from 10.1.24.235 set=evaluator_test trip=00000059 points=1031 time=1.23s accuracy(hmm)=0.9806 accuracy(clf)=0.9583 continuity=0.9301 route_f1=0.8610
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:27,008 PREDICT from 10.1.24.235 set=evaluator_test trip=00000067 points=916 time=0.59s accuracy(hmm)=0.9694 accuracy(clf)=0.9607 continuity=0.9913 route_f1=0.9487
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:28,312 PREDICT from 10.1.24.235 set=evaluator_test trip=00000073 points=1144 time=1.06s accuracy(hmm)=0.9895 accuracy(clf)=0.9860 continuity=0.9904 route_f1=0.9742
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:30,965 PREDICT from 10.1.24.235 set=evaluator_test trip=00000087 points=1399 time=2.09s accuracy(hmm)=0.9971 accuracy(clf)=0.9564 continuity=0.9893 route_f1=0.9810
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK
+2026-11-18 15:35:33,739 PREDICT from 10.1.24.235 set=evaluator_test trip=00000094 points=3230 time=2.29s accuracy(hmm)=0.9625 accuracy(clf)=0.9427 continuity=0.9789 route_f1=0.9402
+INFO:     10.1.24.235:60090 - "POST /predict HTTP/1.1" 200 OK

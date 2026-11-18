@@ -103,7 +103,7 @@ def predict(req: Req, request: Request):
         "set": name, "trip_id": req.trip_id, "n_points": len(trip["track"]), "chain_breaks": out["breaks"],
         "inference_time_s": round(t_pred, 3),
         "metrics": {"classifier_hmm": m_hmm, "classifier_only": m_clf},
-        "gps": trip["track"][:, [1, 0]].round(6).tolist(),
+        "gps": trip["track"][:, [1, 0]].round(6).tolist(), # type: ignore
         "predicted_route": route_lines(trip, out["hmm"]),
         "classifier_route": route_lines(trip, out["clf"]),
     }

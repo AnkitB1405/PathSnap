@@ -1,6 +1,6 @@
 """Candidate road segments for each GPS point, and per-point reference labels."""
 import numpy as np
-from scipy.spatial import cKDTree
+from scipy.spatial import cKDTree #type: ignore
 
 STEP = 10.0  # metres between sample points along an arc in the spatial index
 
